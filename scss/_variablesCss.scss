@@ -1,0 +1,24 @@
+// Declare variables in CSS using the values of the variables created in SASS
+
+// Light Mode - Default
+body {
+	--bg-color: #{$light-mode-bg};
+	--text-color: #{$light-mode-text};
+	--heading-color: #{$light-mode-heading};
+	--top-bg-color: #{$light-mode-top-bg};
+	--card-bg-color: #{$light-mode-card-bg};
+	--toggle-color: #{$light-mode-toggle};
+}
+
+// Dark Mode
+// When click on the toggle button, add/remove the data-theme: dark attribute from the body
+// Add: use the dark mode variables(SASS) as values for the CSS variables
+// Remove: go back to the light mode variables
+body[data-theme='dark'] {
+	--bg-color: #{$dark-mode-bg};
+	--text-color: #{$dark-mode-text};
+	--heading-color: #{$dark-mode-heading};
+	--top-bg-color: #{$dark-mode-top-bg};
+	--card-bg-color: #{$dark-mode-card-bg};
+	--toggle-color: #{$dark-mode-toggle};
+}
